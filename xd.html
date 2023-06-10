@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            padding-top: 100px;
+        }
+        .calculator {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            width: 250px;
+        }
+
+        .display {
+            grid-column: 1 / span 4;
+            height: 50px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 10px;
+            font-size: 24px;
+        }
+
+        .button {
+            height: 50px;
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="display" id="display">0</div>
+        <div class="button" onclick="updateDisplay(7)">7</div>
+        <div class="button" onclick="updateDisplay(8)">8</div>
+        <div class="button" onclick="updateDisplay(9)">9</div>
+        <div class="button" onclick="chooseOperation('+')">+</div>
+        <div class="button" onclick="updateDisplay(4)">4</div>
+        <div class="button" onclick="updateDisplay(5)">5</div>
+        <div class="button" onclick="updateDisplay(6)">6</div>
+        <div class="button" onclick="chooseOperation('-')">-</div>
+        <div class="button" onclick="updateDisplay(1)">1</div>
+        <div class="button" onclick="updateDisplay(2)">2</div>
+        <div class="button" onclick="updateDisplay(3)">3</div>
+        <div class="button" onclick="chooseOperation('*')">*</div>
+        <div class="button" onclick="updateDisplay(0)">0</div>
+        <div class="button" onclick="updateDisplay('.')">.</div>
+        <div class="button" onclick="calculate()">=</div>
+        <div class="button" onclick="chooseOperation('/')">/</div>
+        <div class="button" onclick="clearDisplay()">Clear</div>
+    </div>
+<script src="./xd.js"></script>
+</body>
+
+</html>
